@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './home.component';
 import { RouterModule, Routes } from '@angular/router';
+import { MessagesService } from './messages.service';
+
+import { ChatComponent } from './chat.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: 'chat', component: ChatComponent },
 ];
 
 @NgModule({
@@ -15,8 +17,7 @@ export const routes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  declarations: [HomeComponent],
-  providers: []
+  declarations: [ChatComponent],
+  providers: [MessagesService]
 })
-export class HomeModule {
-}
+export class ChatModule { }

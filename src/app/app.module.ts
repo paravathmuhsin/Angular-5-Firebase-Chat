@@ -8,6 +8,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { AppComponent } from './app.component';
 import { HomeModule } from './modules/home/home.module';
+import { ChatModule } from './modules/chat/chat.module';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 
@@ -31,6 +32,7 @@ export const firebaseConfig = {
   imports: [
     BrowserModule,
     HomeModule,
+    ChatModule,
     RouterModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
